@@ -1,5 +1,5 @@
 ## [SQL exercises](https://sql-ex.ru/exercises/index.php?act=learn&Lang=1#resPlace)
-## **[Схема базы данных](https://sql-ex.ru/help/select13.php#db_1)**
+## **[Database Schema](https://sql-ex.ru/help/select13.php#db_1)**
 Short database description "Computer firm"
 
 The database scheme consists of four tables:
