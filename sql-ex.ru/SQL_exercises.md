@@ -12,4 +12,4 @@ The Product table contains data on the maker, model number, and type of product 
 ### Ex.1: Find the model number, speed and hard drive capacity for all the PCs with prices below $500. Result set: model, speed, hd.
 
 ```sql
-select model, speed, hd FROM PC where price < 500;
+SELECT distinct model, speed, hd FROM PC WHERE  price < 500;
