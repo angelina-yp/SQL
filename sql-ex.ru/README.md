@@ -13,3 +13,10 @@ The Product table contains data on the maker, model number, and type of product 
 
 ```sql
 SELECT distinct model, speed, hd FROM PC WHERE  price < 500;
+```
+
+### Ex.2: List all printer makers. Result set: maker.
+
+
+```sql
+SELECT DISTINCT maker FROM Product WERE type = 'Printer';
