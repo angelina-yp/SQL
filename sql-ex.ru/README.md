@@ -17,6 +17,7 @@ SELECT distinct model, speed, hd FROM PC WHERE  price < 500;
 
 ### Ex.2: List all printer makers. Result set: maker.
 
-
 ```sql
 SELECT DISTINCT maker FROM Product WERE type = 'Printer';
+```
+### Ex.3: Find the model number, RAM and screen size of the laptops with prices over $1000.
