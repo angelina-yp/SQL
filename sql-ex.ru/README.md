@@ -26,5 +26,5 @@ SELECT DISTINCT model, ram, screen FROM Laptop WHERE price > 1000;
 ```
 ### Ex.4: Find all records from the Printer table containing data about color printers.
 ```sql
-
+SELECT * FROM Printer WHERE color= 'y';
 ```
