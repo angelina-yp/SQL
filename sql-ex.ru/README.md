@@ -12,7 +12,7 @@ The Product table contains data on the maker, model number, and type of product 
 ### Ex.1: Find the model number, speed and hard drive capacity for all the PCs with prices below $500. Result set: model, speed, hd.
 
 ```sql
-SELECT distinct model, speed, hd FROM PC WHERE  price < 500;
+SELECT DISTINCT model, speed, hd FROM PC WHERE  price < 500;
 ```
 
 ### Ex.2: List all printer makers. Result set: maker.
@@ -21,3 +21,10 @@ SELECT distinct model, speed, hd FROM PC WHERE  price < 500;
 SELECT DISTINCT maker FROM Product WERE type = 'Printer';
 ```
 ### Ex.3: Find the model number, RAM and screen size of the laptops with prices over $1000.
+```sql
+SELECT DISTINCT model, ram, screen FROM Laptop WHERE price > 1000;
+```
+### Ex.4: Find all records from the Printer table containing data about color printers.
+```sql
+
+```
