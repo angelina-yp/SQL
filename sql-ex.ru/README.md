@@ -64,6 +64,6 @@ SELECT maker FROM Product WHERE type = 'PC' AND maker NOT IN (SELECT maker FROM 
 ### Ex.9: Find the makers of PCs with a processor speed of 450 MHz or more. Result set: maker.
 
 ```sql
-SELECT DISTINCT maker FROM PC JOIN Product ON PC.model = Product.model WHERE speed>=450
+SELECT DISTINCT maker FROM PC JOIN Product ON PC.model = Product.model WHERE speed>=450;
 ```
-
+### Ex.10: Find the printer models having the highest price. Result set: model, price.
