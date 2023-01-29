@@ -49,6 +49,15 @@ WHERE tab.model IN
 ```
 ### Ex.8: Find the makers producing PCs but not laptops.
 ```sql
-
+1)
+SELECT maker FROM (
+SELECT maker FROM Product WHERE type='PC'
+EXCEPT
+SELECT maker FROM Product WHERE type ='Laptop'
+) x GROUP BY maker
 ```
 
+```sql
+2)
+SELECT maker FROM Product WHERE type = 'PC' AND maker NOT IN (SELECT maker FROM Product WHERE type = 'Laptop') GROUP BY maker;
+```
