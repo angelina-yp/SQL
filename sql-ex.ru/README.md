@@ -67,3 +67,13 @@ SELECT maker FROM Product WHERE type = 'PC' AND maker NOT IN (SELECT maker FROM 
 SELECT DISTINCT maker FROM PC JOIN Product ON PC.model = Product.model WHERE speed>=450;
 ```
 ### Ex.10: Find the printer models having the highest price. Result set: model, price.
+
+```sql
+SELECT model, price FROM Printer																
+WHERE price IN (SELECT MAX(price) FROM Printer)	;
+```
+
+### Ex.11: Find out the average speed of PCs.
+```sql
+SELECT AVG(speed) AS AVG_speed FROM PC;
+```
