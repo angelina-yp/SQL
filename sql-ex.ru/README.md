@@ -33,3 +33,11 @@ SELECT * FROM Printer WHERE color= 'y';
 ```sql
 SELECT DISTINCT model, speed, hd  FROM PC WHERE (CD = '24x' OR CD = '12x') AND price < 600;
 ```
+### Ex.6.1: For each maker producing laptops with a hard drive capacity of 10 Gb or higher, find the speed of such laptops. Result set: maker, speed.
+```sql
+SELECT DISTINCT maker, speed FROM Laptop JOIN Product ON Laptop.model = Product.model WHERE hd>=10;
+```
+### Ex.6.2: 
+```sql
+
+```
