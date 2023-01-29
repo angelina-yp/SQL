@@ -28,3 +28,8 @@ SELECT DISTINCT model, ram, screen FROM Laptop WHERE price > 1000;
 ```sql
 SELECT * FROM Printer WHERE color= 'y';
 ```
+
+### Ex.5: Find the model number, speed and hard drive capacity of PCs cheaper than $600 having a 12x or a 24x CD drive.
+```sql
+SELECT DISTINCT model, speed, hd  FROM PC WHERE (CD = '24x' OR CD = '12x') AND price < 600;
+```
