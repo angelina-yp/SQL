@@ -77,3 +77,7 @@ WHERE price IN (SELECT MAX(price) FROM Printer)	;
 ```sql
 SELECT AVG(speed) AS AVG_speed FROM PC;
 ```
+### Ex.12:
+```sql
+
+```
