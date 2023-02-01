@@ -85,7 +85,6 @@ WHERE price > 1000;
 ### Ex.13: Find out the average speed of the PCs produced by maker A.
 ```sql
 SELECT AVG(speed) AS AVG_speed FROM PC
- AS tab
-WHERE tab.model IN 
+WHERE model IN 
 (SELECT model FROM Product WHERE maker =  'A' )
 ```
