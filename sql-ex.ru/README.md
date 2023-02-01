@@ -82,4 +82,7 @@ SELECT AVG(speed) AS AVG_speed FROM PC;
 SELECT AVG(speed) AS AVG_speed FROM Laptop
 WHERE price > 1000;
 ```
-### Ex.13:
+### Ex.13: Find out the average speed of the PCs produced by maker A.
+```sql
+
+```
