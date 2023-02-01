@@ -82,3 +82,4 @@ SELECT AVG(speed) AS AVG_speed FROM PC;
 SELECT AVG(speed) AS AVG_speed FROM Laptop
 WHERE price > 1000;
 ```
+### Ex.13:
