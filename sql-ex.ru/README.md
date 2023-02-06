@@ -93,8 +93,7 @@ WHERE model IN
 ```sql
 
 ```
-### Ex.15: Get hard drive capacities that are identical for two or more PCs.
-Result set: hd.
+### Ex.15: Get hard drive capacities that are identical for two or more PCs. Result set: hd.
 ```sql
 SELECT hd FROM PC GROUP BY hd HAVING COUNT(model) >= 2;
 ```
