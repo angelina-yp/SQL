@@ -88,3 +88,13 @@ SELECT AVG(speed) AS AVG_speed FROM PC
 WHERE model IN 
 (SELECT model FROM Product WHERE maker =  'A' )
 ```
+### Ex.14: For the ships in the Ships table that have at least 10 guns, get the class, name, and country.
+
+```sql
+
+```
+### Ex.15: Get hard drive capacities that are identical for two or more PCs.
+Result set: hd.
+```sql
+SELECT hd FROM PC GROUP BY hd HAVING COUNT(model) >= 2;
+```
