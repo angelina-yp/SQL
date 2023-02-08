@@ -97,3 +97,8 @@ WHERE model IN
 ```sql
 SELECT hd FROM PC GROUP BY hd HAVING COUNT(model) >= 2;
 ```
+### Ex.16: Get pairs of PC models with identical speeds and the same RAM capacity. Each resulting pair should be displayed only once, i.e. (i, j) but not (j, i).
+Result set: model with the bigger number, model with the smaller number, speed, and RAM
+```sql
+SELECT DISTINCT A.model, B.model, A.speed, A.ram FROM PC A, PC B WHERE A.speed = B.speed AND A.ram = B.ram AND A.model > B.model;
+```
