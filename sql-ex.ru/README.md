@@ -101,3 +101,7 @@ SELECT hd FROM PC GROUP BY hd HAVING COUNT(model) >= 2;
 ```sql
 SELECT DISTINCT A.model, B.model, A.speed, A.ram FROM PC A, PC B WHERE A.speed = B.speed AND A.ram = B.ram AND A.model > B.model;
 ```
+### Ex.17:
+```sql
+SELECT DISTINCT type, Laptop.model, speed FROM Laptop JOIN Product ON Laptop.model = Product.model WHERE speed < (SELECT MIN (speed) FROM PC);
+```
