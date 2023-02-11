@@ -105,3 +105,7 @@ SELECT DISTINCT A.model, B.model, A.speed, A.ram FROM PC A, PC B WHERE A.speed =
 ```sql
 SELECT DISTINCT type, Laptop.model, speed FROM Laptop JOIN Product ON Laptop.model = Product.model WHERE speed < (SELECT MIN (speed) FROM PC);
 ```
+### Ex.18: Find the makers of the cheapest color printers. Result set: maker, price.
+```sql
+SELECT DISTINCT maker, price FROM Product JOIN Printer ON Product.model = Printer.model WHERE color = 'y' AND price = (SELECT MIN (price) FROM Printer WHERE color = 'y');
+```
