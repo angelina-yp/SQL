@@ -91,7 +91,10 @@ WHERE model IN
 ### Ex.14: For the ships in the Ships table that have at least 10 guns, get the class, name, and country.
 
 ```sql
-
+SELECT Ships.class, Ships.name,  Classes.country FROM Ships																
+INNER JOIN Classes																
+ON Classes.class = Ships.class																
+WHERE Classes.numGuns >=10
 ```
 ### Ex.15: Get hard drive capacities that are identical for two or more PCs. Result set: hd.
 ```sql
