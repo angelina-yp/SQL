@@ -58,6 +58,15 @@ join roles r
 where role_name like '%Java%';
  ```
   ### Ex.8. Вывести имена и должность только Python разработчиков.
+  ```sql
+  select employee_name, role_name
+from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+where role_name like '%Python%';
+ ```
   ### Ex.9. Вывести имена и должность всех QA инженеров.
   ### Ex.10. Вывести имена и должность ручных QA инженеров.
   ### Ex.11. Вывести имена и должность автоматизаторов QA
