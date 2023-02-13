@@ -34,11 +34,29 @@ where r.role_name is not null
  ```
  ### Ex.5. Найти всех работников кому не начислена ЗП.
   ```sql
+  select employee_name, salary_id 
+from employees e 
+left join employee_salary es 
+	on e.id = es.employee_id 
+where salary_id is null;
  ```
  ### Ex.6. Вывести всех работников с названиями их должности.
   ```sql
+  select employee_name, role_name from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id;
  ```
   ### Ex.7. Вывести имена и должность только Java разработчиков.
+  ```sql
+  select employee_name, role_name from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+where role_name like '%Java%';
+ ```
   ### Ex.8. Вывести имена и должность только Python разработчиков.
   ### Ex.9. Вывести имена и должность всех QA инженеров.
   ### Ex.10. Вывести имена и должность ручных QA инженеров.
