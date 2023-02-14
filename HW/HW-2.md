@@ -79,43 +79,155 @@ where role_name like '%QA%';
  ```
   ### Ex.10. Вывести имена и должность ручных QA инженеров.
   ```sql
+  select employee_name, role_name from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+where role_name like '%Manual QA%';
    ```
   ### Ex.11. Вывести имена и должность автоматизаторов QA
    ```sql
+   select employee_name, role_name from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+where role_name like '%Automation QA%';
    ```
   ### Ex.12. Вывести имена и зарплаты Junior специалистов
    ```sql
+   select employee_name, monthly_salary from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id  
+where role_name like '%Junior%';
    ```
   ### Ex.13. Вывести имена и зарплаты Middle специалистов
    ```sql
+   select employee_name, monthly_salary from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id  
+where role_name like '%Middle%';
    ```
   ### Ex.14. Вывести имена и зарплаты Senior специалистов
    ```sql
-   
+   select employee_name, monthly_salary from roles_employee re 
+join employees e on re.employee_id = e.id
+join roles r on re.role_id = r.id
+join employee_salary es on re.employee_id = es.employee_id
+join salary s on es.salary_id = s.id  
+where role_name like '%Senior%';
    ```
   ### Ex.15. Вывести зарплаты Java разработчиков
    ```sql
-   
+   -- добавил данных, чтобы убедиться в правильности запроса
+insert into roles_employee(employee_id, role_id)
+values (30, 1),
+		(29, 2),
+		(28, 3),
+		(27, 4),
+		(26, 5),
+		(25, 6),
+		(24, 7),
+		(23, 8),
+		(22, 9),
+		(21, 10);
+	
+select * from roles_employee;
+
+select monthly_salary, role_name
+from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id  
+where role_name like '%Java%';
    ```
   ### Ex.16. Вывести зарплаты Python разработчиков
    ```sql
-   
+   select monthly_salary, role_name
+from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id  
+where role_name like '%Python%';
    ```
   ### Ex.17. Вывести имена и зарплаты Junior Python разработчиков
    ```sql
-   
+   select monthly_salary, role_name
+from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id  
+where role_name like '%Junior Python%';
    ```
   ### Ex.18. Вывести имена и зарплаты Middle JS разработчиков
    ```sql
-   
+   select monthly_salary, role_name
+from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id  
+where role_name like '%Middle JavaScript%';
    ```
   ### Ex.19. Вывести имена и зарплаты Senior Java разработчиков
    ```sql
-   
+   select monthly_salary, role_name
+from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id  
+where role_name like '%Senior Java%';
    ```
   ### Ex.20. Вывести зарплаты Junior QA инженеров
    ```sql
-   
+   select monthly_salary, role_name
+from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id  
+where role_name like '%Junior QA%';
    ```
  ### Ex.21. Вывести среднюю зарплату всех Junior специалистов
    ```sql
