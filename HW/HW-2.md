@@ -147,8 +147,7 @@ values (30, 1),
 	
 select * from roles_employee;
 
-select monthly_salary, role_name
-from roles_employee re 
+select monthly_salary, role_name from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -161,8 +160,7 @@ where role_name like '%Java%';
    ```
   ### Ex.16. Вывести зарплаты Python разработчиков
    ```sql
-   select monthly_salary, role_name
-from roles_employee re 
+   select monthly_salary, role_name from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -175,8 +173,7 @@ where role_name like '%Python%';
    ```
   ### Ex.17. Вывести имена и зарплаты Junior Python разработчиков
    ```sql
-   select monthly_salary, role_name
-from roles_employee re 
+   select monthly_salary, role_name from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -189,8 +186,7 @@ where role_name like '%Junior Python%';
    ```
   ### Ex.18. Вывести имена и зарплаты Middle JS разработчиков
    ```sql
-   select monthly_salary, role_name
-from roles_employee re 
+   select monthly_salary, role_name from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -203,8 +199,7 @@ where role_name like '%Middle JavaScript%';
    ```
   ### Ex.19. Вывести имена и зарплаты Senior Java разработчиков
    ```sql
-   select monthly_salary, role_name
-from roles_employee re 
+   select monthly_salary, role_name from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -217,8 +212,7 @@ where role_name like '%Senior Java%';
    ```
   ### Ex.20. Вывести зарплаты Junior QA инженеров
    ```sql
-   select monthly_salary, role_name
-from roles_employee re 
+   select monthly_salary, role_name from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -231,19 +225,55 @@ where role_name like '%Junior QA%';
    ```
  ### Ex.21. Вывести среднюю зарплату всех Junior специалистов
    ```sql
-   
+   select avg(monthly_salary) as avg_junior_salary from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id  
+where role_name like '%Junior%';
    ```
  ### Ex.22. Вывести сумму зарплат JS разработчиков
    ```sql
-   
+   select sum(monthly_salary) as sum_js_dev_salary from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id  
+where role_name like '%JavaScript%';
    ```
  ### Ex.23. Вывести минимальную ЗП QA инженеров
    ```sql
-   
+   select min(monthly_salary) as min_qa_salary from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id  
+where role_name like '%QA%';
    ```
  ### Ex.24. Вывести максимальную ЗП QA инженеров
    ```sql
-   
+   select max(monthly_salary) as max_qa_salary from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id  
+where role_name like '%QA%';
    ```
  ### Ex.25. Вывести количество QA инженеров
    ```sql
