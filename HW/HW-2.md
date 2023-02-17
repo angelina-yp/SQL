@@ -277,33 +277,84 @@ where role_name like '%QA%';
    ```
  ### Ex.25. Вывести количество QA инженеров
    ```sql
-   
+   select count(role_name) as count_role_qa  from roles
+where role_name like '%QA%';
    ```
  ### Ex.26. Вывести количество Middle специалистов.
    ```sql
-   
+   select count(role_name) as count_role_middle from roles
+where role_name like '%Middle%';
    ```
  ### Ex.27. Вывести количество разработчиков
    ```sql
-   
+   select count(role_name) as count_role_dev from roles
+where role_name like '%developer%';
    ```
  ### Ex.28. Вывести фонд (сумму) зарплаты разработчиков.
    ```sql
-   
+   select sum(monthly_salary) as sum_salary  from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id 
+where role_name like '%developer%';
    ```
  ### Ex.29. Вывести имена, должности и ЗП всех специалистов по возрастанию
    ```sql
-   
+   select employee_name, role_name, monthly_salary from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id 
+order by 3;
    ```
  ### Ex.30. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП от 1700 до 2300
    ```sql
-   
+   select employee_name, role_name, monthly_salary  from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id 
+where monthly_salary between 1700 and 2300
+order by 3;
    ```
  ### Ex.31. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП меньше 2300
    ```sql
-   
+   select employee_name, role_name, monthly_salary  from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id 
+where monthly_salary < 2300
+order by 3;
    ```
 ### Ex. 32. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП равна 1100, 1500, 2000
   ```sql
-   
+   select employee_name, role_name, monthly_salary from roles_employee re 
+join employees e 
+	on re.employee_id = e.id
+join roles r 
+	on re.role_id = r.id
+join employee_salary es 
+	using(employee_id)
+join salary s 
+	on es.salary_id = s.id 
+where monthly_salary in (1100, 1500, 2000)
+order by 3;
    ```
