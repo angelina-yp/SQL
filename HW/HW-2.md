@@ -67,7 +67,7 @@ where role_name like '%Python%';
  ```
   ### Ex.9. Вывести имена и должность всех QA инженеров.
    ```sql
-  select employee_name, role_name
+  SELECT employee_name, role_name
 from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
@@ -77,7 +77,7 @@ where role_name like '%QA%';
  ```
   ### Ex.10. Вывести имена и должность ручных QA инженеров.
   ```sql
-  select employee_name, role_name from roles_employee re 
+  SELECT employee_name, role_name from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -86,7 +86,7 @@ where role_name like '%Manual QA%';
    ```
   ### Ex.11. Вывести имена и должность автоматизаторов QA
    ```sql
-   select employee_name, role_name from roles_employee re 
+  SELECT employee_name, role_name from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -95,7 +95,7 @@ where role_name like '%Automation QA%';
    ```
   ### Ex.12. Вывести имена и зарплаты Junior специалистов
    ```sql
-   select employee_name, monthly_salary from roles_employee re 
+   SELECT employee_name, monthly_salary from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
