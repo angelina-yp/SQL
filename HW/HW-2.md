@@ -121,7 +121,7 @@ where role_name like '%Middle%';
    ```
   ### Ex.14. Вывести имена и зарплаты Senior специалистов
    ```sql
-   select employee_name, monthly_salary from roles_employee re 
+   SELECT employee_name, monthly_salary from roles_employee re 
 join employees e on re.employee_id = e.id
 join roles r on re.role_id = r.id
 join employee_salary es on re.employee_id = es.employee_id
@@ -130,7 +130,7 @@ where role_name like '%Senior%';
    ```
   ### Ex.15. Вывести зарплаты Java разработчиков
    ```sql
-   -- добавил данных, чтобы убедиться в правильности запроса
+   -- добавленны данные
 insert into roles_employee(employee_id, role_id)
 values (30, 1),
 		(29, 2),
@@ -344,7 +344,7 @@ order by 3;
    ```
 ### Ex. 32. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП равна 1100, 1500, 2000
   ```sql
-   select employee_name, role_name, monthly_salary from roles_employee re 
+  SELECT employee_name, role_name, monthly_salary from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
