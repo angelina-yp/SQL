@@ -158,7 +158,7 @@ where role_name like '%Java%';
    ```
   ### Ex.16. Вывести зарплаты Python разработчиков
    ```sql
-   select monthly_salary, role_name from roles_employee re 
+   SELECT monthly_salary, role_name from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -236,7 +236,7 @@ where role_name like '%Junior%';
    ```
  ### Ex.22. Вывести сумму зарплат JS разработчиков
    ```sql
-   select sum(monthly_salary) as sum_js_dev_salary from roles_employee re 
+ SELECT sum(monthly_salary) as sum_js_dev_salary from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -249,7 +249,7 @@ where role_name like '%JavaScript%';
    ```
  ### Ex.23. Вывести минимальную ЗП QA инженеров
    ```sql
-   select min(monthly_salary) as min_qa_salary from roles_employee re 
+  SELECT min(monthly_salary) as min_qa_salary from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -262,7 +262,7 @@ where role_name like '%QA%';
    ```
  ### Ex.24. Вывести максимальную ЗП QA инженеров
    ```sql
-   select max(monthly_salary) as max_qa_salary from roles_employee re 
+ SELECT  select max(monthly_salary) as max_qa_salary from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -275,7 +275,7 @@ where role_name like '%QA%';
    ```
  ### Ex.25. Вывести количество QA инженеров
    ```sql
-   select count(role_name) as count_role_qa  from roles
+   SELECT count(role_name) as count_role_qa  from roles
 where role_name like '%QA%';
    ```
  ### Ex.26. Вывести количество Middle специалистов.
@@ -290,7 +290,7 @@ where role_name like '%developer%';
    ```
  ### Ex.28. Вывести фонд (сумму) зарплаты разработчиков.
    ```sql
-   select sum(monthly_salary) as sum_salary  from roles_employee re 
+  SELECT sum(monthly_salary) as sum_salary  from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -303,7 +303,7 @@ where role_name like '%developer%';
    ```
  ### Ex.29. Вывести имена, должности и ЗП всех специалистов по возрастанию
    ```sql
-   select employee_name, role_name, monthly_salary from roles_employee re 
+   SELECT employee_name, role_name, monthly_salary from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -316,7 +316,7 @@ order by 3;
    ```
  ### Ex.30. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП от 1700 до 2300
    ```sql
-   select employee_name, role_name, monthly_salary  from roles_employee re 
+   SELECT employee_name, role_name, monthly_salary  from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -330,7 +330,7 @@ order by 3;
    ```
  ### Ex.31. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП меньше 2300
    ```sql
-   select employee_name, role_name, monthly_salary  from roles_employee re 
+  SELECT employee_name, role_name, monthly_salary  from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
