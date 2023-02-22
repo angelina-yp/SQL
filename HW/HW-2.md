@@ -108,7 +108,7 @@ where role_name like '%Junior%';
    ```
   ### Ex.13. Вывести имена и зарплаты Middle специалистов
    ```sql
-   select employee_name, monthly_salary from roles_employee re 
+   SELECT employee_name, monthly_salary from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -143,7 +143,7 @@ values (30, 1),
 		(22, 9),
 		(21, 10);
 	
-select * from roles_employee;
+SELECT * from roles_employee;
 
 select monthly_salary, role_name from roles_employee re 
 join employees e 
@@ -171,9 +171,9 @@ where role_name like '%Python%';
    ```
   ### Ex.17. Вывести имена и зарплаты Junior Python разработчиков
    ```sql
-   select monthly_salary, role_name from roles_employee re 
+   SELECT monthly_salary, role_name from roles_employee re 
 join employees e 
-	on re.employee_id = e.id
+	SELECTon re.employee_id = e.id
 join roles r 
 	on re.role_id = r.id
 join employee_salary es 
@@ -184,7 +184,7 @@ where role_name like '%Junior Python%';
    ```
   ### Ex.18. Вывести имена и зарплаты Middle JS разработчиков
    ```sql
-   select monthly_salary, role_name from roles_employee re 
+   SELECT monthly_salary, role_name from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -197,7 +197,7 @@ where role_name like '%Middle JavaScript%';
    ```
   ### Ex.19. Вывести имена и зарплаты Senior Java разработчиков
    ```sql
-   select monthly_salary, role_name from roles_employee re 
+   SELECT monthly_salary, role_name from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -210,7 +210,7 @@ where role_name like '%Senior Java%';
    ```
   ### Ex.20. Вывести зарплаты Junior QA инженеров
    ```sql
-   select monthly_salary, role_name from roles_employee re 
+   SELECT monthly_salary, role_name from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
@@ -223,7 +223,7 @@ where role_name like '%Junior QA%';
    ```
  ### Ex.21. Вывести среднюю зарплату всех Junior специалистов
    ```sql
-   select avg(monthly_salary) as avg_junior_salary from roles_employee re 
+  SELECT avg(monthly_salary) as avg_junior_salary from roles_employee re 
 join employees e 
 	on re.employee_id = e.id
 join roles r 
