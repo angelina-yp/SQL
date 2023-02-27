@@ -110,5 +110,5 @@ SELECT DISTINCT type, Laptop.model, speed FROM Laptop JOIN Product ON Laptop.mod
 ```
 ### Ex.18: Find the makers of the cheapest color printers. Result set: maker, price.
 ```sql
-SELECT DISTINCT maker, price FROM Product JOIN Printer ON Product.model = Printer.model WHERE color = 'y' AND price = (SELECT MIN (price) FROM Printer WHERE color = 'y');
+SELECT DISTINCT maker, price FROM Product JOIN Printer ON Product.model = Printer.model WHERE color = 'y' AND price = (SELECT MIN (price) FROM Printer WHERE color = 'y').
 ```
