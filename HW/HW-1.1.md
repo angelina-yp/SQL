@@ -3,31 +3,31 @@
 
  ### Ex.1. Вывести все поля и все строки.
  ```sql
- 
+ select * from students;
  ```
  ### Ex.2. Вывести всех студентов в таблице
   ```sql
- 
+  select name from students;
  ```
  ### Ex.3. Вывести только Id пользователей
   ```sql
- 
+  select id from students;
  ```
  ### Ex.4. Вывести только имя пользователей
   ```sql
- 
+ select name from students;
  ```
  ### Ex.5. Вывести только email пользователей
   ```sql
- 
+ select email from students;
  ```
  ### Ex.6. Вывести имя и email пользователей
   ```sql
- 
+  select name, email from students;
  ```
  ### Ex.7. Вывести id, имя, email и дату создания пользователей
   ```sql
- 
+   select id, name, email, created,_on from students;
  ```
  ### Ex.8. Вывести пользователей где password 12333
   ```sql
