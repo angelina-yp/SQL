@@ -1,5 +1,5 @@
 ## HW-1.1
-
+![DBeaver-scrin](https://user-images.githubusercontent.com/104057573/226921382-61f14731-6553-4702-8e73-fea63fee32a6.png)
 
  ### Ex.1. Вывести все поля и все строки.
  ```sql
