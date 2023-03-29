@@ -103,48 +103,52 @@
   ### Ex.22. Вывести пользователя у которых id меньше либо равно 137
   ```sql
  select * from students
- id < = 137;
+ where id < = 137;
  ```
   ### Ex.23. Вывести пользователя у которых id больше либо равно 137
   ```sql
   select * from students
- id > = 137;
+ where id > = 137;
  ```
   ### Ex.24. Вывести пользователя у которых id больше 180 но меньше 190
   ```sql
  select * from students
- id > 180 and id < 190;
+ where id > 180 and id < 190;
  ```
   ### Ex.25. Вывести пользователя у которых id между 180 и 190
   ```sql
-  select * from students
- id between 180 and 190;
+ select * from students
+ where id between 180 and 190;
  ```
   ### Ex.26. Вывести пользователей где password равен 12333, 1m313, 123313
   ```sql
- 
+ select * from students
+ where  password in ('12333', '1m313', '123313');
  ```
   ### Ex.27. Вывести пользователей где created_on равен 2020-10-03 00:00:00, 2021-05-19 00:00:00, 2021-03-26 00:00:00
   ```sql
- 
+ select * from students 
+ where created_on in ('2020-10-03 00:00:00', '2021-05-19 00:00:00', '2021-03-26 00:00:00');
  ```
   ### Ex.28. Вывести минимальный id 
   ```sql
- 
+ select min(id) from students;
  ```
   ### Ex.29. Вывести максимальный.
   ```sql
- 
+ select max(id) from students;
  ```
   ### Ex.30. Вывести количество пользователей
   ```sql
- 
+ select count(id) from students;
  ```
   ### Ex.31. Вывести id пользователя, имя, дату создания пользователя. Отсортировать по порядку возрастания даты добавления пользоватлеля.
   ```sql
- 
+ select id, name, created_on from students 
+ order by created_on; -- по умолчанию сортирует по возрастанию
  ```
   ### Ex.32. Вывести id пользователя, имя, дату создания пользователя. Отсортировать по порядку убывания даты добавления пользоватлеля.
   ```sql
- 
+ select id, name, created_on from students 
+ order by created_on desc;
  ```
