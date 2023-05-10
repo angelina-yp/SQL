@@ -27,7 +27,7 @@
  ```
  ### Ex.7. Вывести id, имя, email и дату создания пользователей
   ```sql
-   select id, name, email, created,_on from students;
+   select id, name, email, created_on from students;
  ```
  ### Ex.8. Вывести пользователей где password 12333
   ```sql
@@ -37,7 +37,7 @@
  ### Ex.9. Вывести пользователей которые были созданы 2021-03-26 00:00:00
   ```sql
  select * from students
- where created,_on = '2021-03-26 00:00:00';
+ where created_on = '2021-03-26 00:00:00';
  ```
  ### Ex.10. Вывести пользователей где в имени есть слово Анна
   ```sql
