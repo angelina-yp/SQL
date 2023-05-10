@@ -47,7 +47,7 @@
  ### Ex.11. Вывести пользователей где в имени в конце есть 8
   ```sql
   select * from students
- where name name like '%8';
+ where name like '%8';
  ```
  ### Ex.12. Вывести пользователей где в имени в есть буква а
   ```sql
