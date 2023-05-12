@@ -6,7 +6,7 @@ SELECT employee_name, monthly_salary from employees join employee_salary on empl
 ```
 ### Ex.2: Вывести всех работников у которых ЗП меньше 2000.
 ```sql
-SELECT employee_name from employees join employee_salary on employees.id = employee_salary.employee_id join salary on employee_salary.salary_id =salary.id WHERE salary.monthly_salary<2000 ;
+SELECT employee_name, monthly_salary from employees join employee_salary on employees.id = employee_salary.employee_id join salary on employee_salary.salary_id =salary.id WHERE salary.monthly_salary<2000 ;
 ```
  ### Ex.3. Вывести все зарплатные позиции, но работник по ним не назначен. (ЗП есть, но не понятно кто её получает.)
  ```sql
